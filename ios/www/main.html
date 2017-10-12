@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="telephone=no" name="format-detection" />
+    <title>图标化首页</title>
+    <script type="text/javascript">
+    var UpdateServerPath,
+    	FireFlyContextPath,
+    	ScImgPath;
+    var dev = false;
+    	if (dev==true){
+    		UpdateServerPath = "http://moau.capitalwater.cn/test/";
+       		//FireFlyContextPath = "http://10.10.120.182:8080/";//虚拟路径
+            //FireFlyContextPath = "http://10.10.105.158:8080/";//虚拟路径
+            FireFlyContextPath = "http://10.10.11.124:8081/";//虚拟路径
+       		ScImgPath = "http://10.10.11.124";//图片路径
+    	}else{
+    		UpdateServerPath = "http://moau.capitalwater.cn/";
+    		FireFlyContextPath = "http://portal.capitalwater.cn:8081/";//虚拟路径
+    		ScImgPath = "http://portal.capitalwater.cn";//图片路径
+    	}
+	var defaultSmallProfile = "css/customImages/profile.png";
+	var defaultBigProfile = "css/customImages/sc-default-big-profile.jpg";
+    var cmpy = '2';
+    
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.0.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.external-png-1.4.5.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+
+	<link rel="stylesheet" type="text/css" href="js/tree/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mbCustom.css" />
+	<link rel="stylesheet" type="text/css" href="css/mbLogin.css" />
+    <link rel="stylesheet" type="text/css" href="css/wjdc.css" />
+
+
+	<!-- 外部jquery库js脚本-->
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script> 
+	<script type="text/javascript" src="plugins/version.js"></script>
+	<script type="text/javascript" src="plugins/fileOpener.js"></script>
+	<script type="text/javascript" src="plugins/telephonyInfo.js"></script>
+	<script type="text/javascript" src="js/q.js"></script> 
+	
+	<!-- 平台UI核心js库 -->
+	<script type="text/javascript" src="js/platform.js"></script>
+	<script type="text/javascript" src="js/tools.js"></script>
+	<script type="text/javascript" src="js/constant.js"></script>
+	<script type="text/javascript" src="js/mb.ui.grid.js"></script>
+	<script type="text/javascript" src="js/mb.ui.form.js"></script>
+	<script type="text/javascript" src="js/tree/jquery.tree.js"></script>
+
+	<script type="text/javascript" src="js/mbLogin.js"></script>
+	<script type="text/javascript" src="js/mbCustom.js"></script> 
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    
+	
+	<script type="text/javascript" src="js/mbDeskView.js"></script>
+	<script type="text/javascript" src="js/mbCardView.js"></script>
+	<script type="text/javascript" src="js/mbListView.js"></script>
+	<script type="text/javascript" src="js/mbWfCardView.js"></script>
+	<script type="text/javascript" src="js/mbNewsView.js"></script>
+	<script type="text/javascript" src="js/mbContacts.js"></script>
+	<script type="text/javascript" src="js/mbContactDetail.js"></script>
+	<script type="text/javascript" src="js/mbContactsChoose.js"></script>
+	<script type="text/javascript" src="js/mbMind.js"></script>
+    <script type="text/javascript" src="js/SQLitePlugin.js"></script>
+	<script type="text/javascript" src="js/mbRoleChoose.js"></script>
+    <script type="text/javascript" src="js/mbNCView.js"></script><!-- NC的报销系统js -->
+    <script type="text/javascript" src="js/mbWJDCView.js"></script><!-- 问卷调查js -->
+    <script type="text/javascript" src="js/wjdc_dt.js"></script><!-- 问卷调查js -->
+    <script type="text/javascript" src="js/mbOFCView.js"></script><!-- OFC的报销系统js -->
+    <!--weinre 调试脚本 -->
+    <!--<script  src="http://172.16.0.43:8080/target/target-script-min.js#anonymous"></script>-->
+</head>
+<body>
+	<div data-role="page" id="login" data-dom-cache="true">
+		 <div class="logo">
+		 	<img src="css/customImages/m_logo.png" />
+		 </div>
+		 <div class="content" style="display:block;">
+		 	 <div id="msg"></div>
+<!--		      <div class="username" style="display:block;">-->
+<!--		     	 <label for="USER_CODE">用户名</label>-->
+<!--		         <input type="text" data-role="none" name="username" id="USER_CODE" autocomplete="on" value=""/>-->
+<!--		         <span class="user-icon icon">u</span>-->
+<!--		     </div> -->
+		     <div class="password">
+		     	 <label for="USER_PWD">输入密码</label>
+		         <input type="password" data-role="none" name="password" id="USER_PWD" value=""/>
+		         <span class="password-icon icon">p</span>
+		     </div>
+		     <div class="account-control">
+		         <input type="submit" data-role="none" id="btnLogin" value="确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;认" />
+		     </div>
+            <div></div>
+            <div id="udid" style="opacity:0;position:fixed;bottom:0px;">
+                <span style="opacity:1">
+                <a href="javascript:showUdid();"   data-role="none" >唯一标识</a>
+                </span>
+            </div>
+		 </div>
+	</div>
+	<div data-role="page" id="mbDesk" data-theme="a" data-dom-cache="true">
+		<div data-role="header" id="mbDesk_header">
+			<span class="sc-desk-logo"></span>
+			<h1><span class="sc-desk-title"><span class="sc-username"></span></span></h1>
+ <a href="" data-role="button" id="btnLogout" data-inline="true" class="ui-btn ui-btn-right ui-btn-icon-left ui-btn-icon-notext ui-icon-close">退出</a>		</div>
+		<div role="main" class="ui-content" id="mbDesk_content"></div>
+	</div>
+	<!--通讯录-->
+	<div data-role="page" id="contacts">
+		<div data-role="header" id="contacts_header" data-position="fixed" data-tap-toggle="false">
+			<a href="#mbDesk" data-rel="back" class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+			<div class="sc-controlgroup-wrp">
+	            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+	                <input type="radio" name="contact-radio-choice" id="js-contacts-group" value="on" checked="checked">
+	                <label for="js-contacts-group">分组</label>
+	                <input type="radio" name="contact-radio-choice" id="js-contacts-all" value="off">
+	                <label for="js-contacts-all">全部</label>
+	            </fieldset>
+	       </div>
+		</div>
+		<div role="main" class="ui-content" id="contacts_content">
+            <div class="contacts-content js-contacts-group contacts-content-active">
+            	<div data-role="collapsible-set" id="contactsGroup">
+            	</div>
+            </div><!--contacts-group-->
+            <div class="contacts-content js-contacts-all">
+            	<ul data-role="listview"  id="contactsList" data-icon="false" data-autodividers="true" data-swipable="true" style="position:relative;">
+            	</ul>
+            </div><!--contacts-all-->
+		</div><!-- /content -->
+	</div><!-- /contacts -->
+	<!-- 通讯录人员选择 -->
+	<div data-role="page" id="contactsChoose">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+			<a href="#" data-rel="back" class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+			<h1>联系人</h1>
+		</div>
+		<div role="main" class="ui-content" id="contactsChoose_content" ></div>
+    	<div data-role="footer" id="contactsChoose_footer" data-position="fixed" data-tap-toggle="false">
+    		<div data-role="navbar">
+    			<ul><li>
+    					<a href="#" data-rel="back" class="js-sc-cancel ui-link ui-btn ui-icon-cancel ui-btn-icon-top">取消</a>
+    				</li><li>
+    					<a href="#" class="js-sc-save ui-link ui-btn ui-icon-confirm ui-btn-icon-top">确认</a>
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
+	</div><!-- /contactsChoose -->
+	<!-- 个人详情 -->
+	<div data-role="page" id="contactDetail">
+		<div data-role="header" id="contactDetail_header" data-position="fixed" data-tap-toggle="false">
+	    	<a href="#" data-rel="back" class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+	        <h1></h1>
+	    </div>
+	    <div role="main" class="ui-content">
+	            <ul data-role="listview" id="contactDetailList" data-icon="false">
+	            </ul> 
+	    </div><!-- /content -->
+	</div><!-- /contactsDetail -->
+	<!-- 短信中心 -->
+	<div data-role="page" id="message">
+		<div data-role="header">
+	    	<a href="#mbDesk" data-rel="back" class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+	        <h1>新信息</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+	        <label for="receivers">至</label>
+	        <input type="text" data-corners="false" class="ui-disabled" placeholder="收件人" name="receivers" id="receivers" />
+	        <div class="ui-input-text ui-shadow-inset ui-btn-shadow" style="border-width: 0;">
+	            <textarea placeholder="输入信息" ></textarea>
+	        </div>
+	        <a href="#" data-role="button" id="choosePerson" class="contacts" data-transition="slideup" data-iconpos="notext" data-corners="false" data-icon="addContacts">联系人</a>
+	        <a href="#" data-role="button" id="send" class="sender" data-iconpos="notext" data-corners="false" data-icon="sender">发送</a>
+	    </div>
+	</div>
+	<!-- 密码修改 -->
+ 	<div data-role="page" id="pwdEdit">
+		<div data-role="header">
+	    	<a href="#mbDesk" data-rel="back" class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+	        <h1>密码修改</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+	    	<span class="error" id="errorTip"></span>
+	        <label for="oldPwd" class="ui-hidden-accessible">旧密码</label>
+	        <input type="password" data-corners="false" placeholder="旧密码" id="oldPwd" />
+	        <label for="newPwd" class="ui-hidden-accessible">新密码</label>
+	        <input type="password" data-corners="false" placeholder="新密码" id="newPwd" />
+	        <label for="newPwdConfirm" class="ui-hidden-accessible">确认密码</label>
+	        <input type="password" data-corners="false" placeholder="确认密码" id="newPwdConfirm" />
+	        <a href="#" class="ui-btn ui-shadow ui-corner-all" id="pwdEditBtn">确定</a>
+	    </div>
+	</div>
+	<!-- 查询 -->
+	<div data-role="page" id="search">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+	    	<a href="#mbDesk" data-rel="back" data-ajax="true" class="ui-btn ui-btn-icon-left ui-icon-back ui-btn-icon-notext">返回</a>
+	        <h1>查询</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+	    	 <form class="clearfix">
+	    	 	<input id="searchtext" data-type="search" placeholder="查询">
+	    	 	<a href="#" id="searchbtn" class="ui-btn ui-btn-inline">搜索</a>
+	    	 </form>
+	    	 <ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-input="#searchtext">
+	    	 </ul>
+	    </div>
+	</div>
+	<!-- 关于 -->
+	<div data-role="page" id="about">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+	    	<a href="#mbDesk" data-rel="back" data-ajax="true" class="ui-btn ui-btn-icon-left ui-icon-back ui-btn-icon-notext">返回</a>
+	        <h1>关于</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+	    	 <ul data-role="listview" data-inset="true">
+	    	 	<!-- <li id="checknewversion"> 检测新版本</li> -->
+	    	 	<li id="versionName"></li>
+	    	 </ul>
+	    </div>
+	</div>
+	<!-- list view -->
+	<div data-role="page" id="listview">
+		<div data-role="header" id="listview_header" data-position="fixed" data-tap-toggle="false">
+			<a href="#" data-rel="back" class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+			<h1></h1>
+		</div>
+		<div role="main" class="ui-content" id="listview_content"></div>
+	</div>
+	<!-- list view dq chnl-->
+	<div data-role="page" id="listviewDq">
+		<div data-role="header" id="listviewDq_header" data-position="fixed" data-tap-toggle="false">
+			<a href="#" data-rel="back" class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+			<h1></h1>
+		</div>
+		<div role="main" class="ui-content" id="listviewDq_content"></div>
+	</div>
+	<!-- card view -->
+	<div data-role="page" id="cardview">
+		<div data-role="header" id="cardview_header" data-position="fixed" data-tap-toggle="false">
+			<a href="#" data-rel="back" class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+			<h1></h1>
+		</div>
+		<div role="main" class="ui-content" id="cardview_content"></div>
+		<div data-role="footer" id="cardview_footer" data-position="fixed" data-tap-toggle="false"></div>
+	</div>
+	<!-- 新闻类浏览 -->
+	<div data-role="page" id="newsview">
+		<div data-role="header" id="newsview_header" data-position="fixed" data-tap-toggle="false">
+			<a href="#mbDesk" data-rel="back" class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+			<h1></h1>
+		</div>
+		<div role="main" class="ui-content" id="newsview_content"></div>
+	</div>
+    <!-- 问卷调查-->
+    <div data-role="page" id="WJDCview">
+        <div data-role="header" id="WJDCview_header" data-position="fixed"
+            data-tap-toggle="false">
+            <a href="#mbDesk" data-rel="back"
+                class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+            <h1></h1>
+        </div>
+        <div role="main" class="ui-content" id="WJDCview_content"></div>
+    </div>
+    
+	<!-- 分发 -->
+	
+	<div data-role="page" id="cmSimpleFenFa">
+		<div data-role="header">
+			<a href="#mbDesk" data-rel="back"
+				class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+			<h1>分发</h1>
+		</div>
+		
+		<div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="e">
+			<h3>选择角色&部门</h3>
+			<ul data-role="listview">
+				<li>
+					<span>角色</span>
+					<a href="#" id="choose_Role" ><input type="text"
+					data-corners="false" class="ui-disabled" placeholder="角色选择"
+					name="roleName" id="roleName" /><input type="hidden" id="roleCode"/></a>
+				</li>
+			</ul>
+		</div>
+		<input type="submit" id="submitfenfa" value="确认分发"/>
+	</div> 
+	
+	<!-- 角色选择 -->
+	 <div data-role="page" id="roleChoose">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+			<a href="#" data-rel="back"
+				class="ui-btn ui-btn-icon-left ui-btn-icon-notext ui-icon-back">返回</a>
+			<h1>角色</h1>
+		</div>
+		<div role="main" class="ui-content" id="roleChoose_content"></div>
+		<div data-role="footer" id="roleChoose_footer"
+			data-position="fixed" data-tap-toggle="false">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" data-rel="back"
+						class="js-sc-cancel ui-link ui-btn ui-icon-cancel ui-btn-icon-top">取消</a>
+					</li>
+					<li><a href="#"
+						class="js-sc-save ui-link ui-btn ui-icon-confirm ui-btn-icon-top">确认</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>  
+	
+</body>
+</html> 

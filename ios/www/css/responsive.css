@@ -1,0 +1,124 @@
+
+/*Galaxy Note2 In Portrait*/
+@media only screen
+and (min-device-width : 360px)
+and (max-device-width : 640px)
+and (orientation : portrait){
+ 	.mb-desk-app{
+ 		width: 98px;
+ 		padding: 20px 5px;
+ 	}
+ 	.mb-desk-app span.sc-desk-app-icon {
+		width: 65px;
+		height: 65px;
+	}
+	.mb-desk-new-count{
+		top: 10px;
+	}
+}
+/*IPHONE 5 In Portrait*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait){
+ 	.mb-desk-app{
+ 		width: 80px;
+ 		padding: 16px 6px;
+ 	}
+ 	.mb-desk-app span.sc-desk-app-icon {
+		width: 65px;
+		height: 65px;
+	}
+	.mb-desk-new-count{
+		top: 1px;
+	}
+}
+/*IPHONE 4 In Portrait*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation : portrait){
+ 	.mb-desk-app{
+ 		width: 70px;
+ 		padding: 6px 12px;
+ 	}
+ 	.mb-desk-app span.sc-desk-app-icon {
+		width: 60px;
+		height: 60px;
+	}
+	.mb-desk-app-text {
+		font-size: 0.8em;
+	
+		line-height: normal;
+}
+	.mb-desk-new-count{
+		top: 1px;
+	}
+}
+
+
+
+
+/**************如果不行，试试以下******************/
+
+/*Galaxy Note2 In Portrait*/
+@media only screen
+and (min-device-width : 720px)
+and (max-device-width : 1280px)
+and (orientation : portrait){
+ 	.mb-desk-app{
+ 		width: 98px;
+ 		padding: 20px 5px;
+ 	}
+ 	.mb-desk-app span.sc-desk-app-icon {
+		width: 65px;
+		height: 65px;
+	}
+	.mb-desk-new-count{
+		top: 10px;
+	}
+}
+/*IPHONE 5 In Portrait*/
+@media only screen
+and (min-device-width : 640px)
+and (max-device-width : 1136px)
+and (orientation : portrait){
+ 	.mb-desk-app{
+ 		width: 80px;
+ 		padding: 16px 6px;
+ 	}
+ 	.mb-desk-app span.sc-desk-app-icon {
+		width: 65px;
+		height: 65px;
+	}
+	.mb-desk-new-count{
+		top: 1px;
+	}
+}
+/*IPHONE 4 In Portrait*/
+@media only screen
+and (min-device-width : 640px)
+and (max-device-width : 960px)
+and (orientation : portrait){
+ 	.mb-desk-app{
+ 		width: 70px;
+ 		padding: 6px 12px;
+ 	}
+ 	.mb-desk-app span.sc-desk-app-icon {
+		width: 60px;
+		height: 60px;
+	}
+	.mb-desk-app-text {
+		font-size: 0.8em;
+	
+		line-height: normal;
+}
+	.mb-desk-new-count{
+		top: 1px;
+	}
+}
+
+
+
+
+/**************如果不行，试试以下******************/

@@ -1,0 +1,44 @@
+body{
+   height:100%;
+   border:0px red solid;
+   background:white url('/sy/comm/index/img/top_blue_mb.jpg') no-repeat  center top;
+   font-size:16px;
+   font-family:宋体;
+   color:#383838;
+   overflow-x:hidden;
+}
+.top_logo {
+   width:296px;
+   height:71px;
+   margin:3% auto 30px auto;
+   padding-top:0px;
+   border:0px red solid;
+   background:url('/sy/comm/index/img/logo_mb.png')  no-repeat center center;
+}
+
+.mb-box-shadow-inset{-moz-box-shadow:2px 2px 3px #BDBEBB inset;-webkit-box-shadow:2px 2px 3px #BDBEBB inset;box-shadow:2px 2px 3px #BDBEBB inset;}
+.mb-radius-40 {border-radius:40px 40px; -moz-border-radius:40px 40px;-webkit-border-radius:40px 40px;-o-border-radius:40px 40px;-ms-border-radius:40px 40px;-khtml-border-radius:40px 40px;}
+.mb-radius-9 {border-radius:9px 9px; -moz-border-radius:9px 9px;-webkit-border-radius:9px 9px;-o-border-radius:9px 9px;-ms-border-radius:9px 9px;-khtml-border-radius:9px 9px;}
+.mb-radius-left6 {border-top-left-radius:0.6em;border-bottom-left-radius:0.6em;}
+.mb-radius-1em {border-radius:12px;}
+.mb-radius-right6 {border-top-right-radius:0.6em;border-bottom-right-radius:0.6em;}
+.mb-shadow {box-shadow:0px 1px 4px rgba(0,0,0,0.3);}
+
+.mbLogin-con {text-align:center;position:relative;border:0px red solid;min-height:150px;margin-top:4%;vertical-align:middle;border:0px red solid;}
+.mbLogin-line {width:100%;border:0px red solid;margin:10px 0px;}
+.mbLogin-cmpy {display:none;}
+.user-input {border:1px #CCC solid;padding-left:5px;color:gray;}
+#USER_CODE {font-size:16px;}
+.pwd_con {position:relative;display:inline-block;width:183px;height:100%;}
+.pwd_span {font-size:16px;line-height:35px;height:100%;border:0px red solid;position: absolute;left:5px; top:0px;color:gray;}
+.pwd-input {margin-left:-3px;border:1px #CCC solid;padding-left:5px;color:gray;}
+#USER_PASSWORDS {width:100%;}
+.mbLogin-remb {display:none;}
+.mbLogin-remb-div {background-color:rgb(57, 107, 158);border:1px #044062 solid;color:white;}
+.loginAuto-lb {line-height:70px;}
+.loginAuto-check {height:40px;width:40px;}
+.submit {cursor:pointer;width:100%;height:100%;font-size:20px;background:url('/sy/comm/index/img/submit_mb.png') no-repeat center center;color:white;font-family:宋体;text-shadow: 0px -1px 1px black;}
+.mbLogin-line-div {font-size:20px;width:183px;height:33px;line-height:33px;}
+
+.footer {display:inline-block;position:absolute;bottom:0px;font-size:12px;width:100%;text-align:center;}
+

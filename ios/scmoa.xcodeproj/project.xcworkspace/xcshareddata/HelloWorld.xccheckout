@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E5CF79D6-6F11-4A5D-AD4E-E87A6EA5657A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloWorld</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>59DEA20C-88FA-466A-BB5F-00F3023C0A11</key>
+		<string>https://code.csdn.net/ruaho_liwell/ehoming.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>phone/platforms/ios/HelloWorld.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>59DEA20C-88FA-466A-BB5F-00F3023C0A11</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://code.csdn.net/ruaho_liwell/ehoming.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>59DEA20C-88FA-466A-BB5F-00F3023C0A11</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>59DEA20C-88FA-466A-BB5F-00F3023C0A11</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ehoming</string>
+		</dict>
+	</array>
+</dict>
+</plist>
