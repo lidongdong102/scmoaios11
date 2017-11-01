@@ -180,9 +180,9 @@ NSString *serverUrl = @"http://moaupdate.capitalwater.cn/";
 NSString *testServerUrl = @"http://moaupdate.capitalwater.cn/";
 NSString *feedURLString = @"http://moaupdate.capitalwater.cn/iosVersion.xml";
 //NSString *feedURLString = @"http://10.10.105.101:8080/iosVersion.xml";
-NSString *updateUrl = @"itms-services:///?action=download-manifest&url=https://moaupdate.capitalwater.cn:433/scmoa.plist";
+NSString *updateUrl = @"itms-services:///?action=download-manifest&url=https://moaupdate.capitalwater.cn:433/scmoanew.plist";
 
-NSString *testUpdateUrl = @"itms-services:///?action=download-manifest&url=https://moaupdate.capitalwater.cn:433/scmoa.plist";
+NSString *testUpdateUrl = @"itms-services:///?action=download-manifest&url=https://moaupdate.capitalwater.cn:433/scmoanew.plist";
 static NSString *newVersion = @"0";
 NSString *tempString  = nil;
 static NSString *forcible = @"false";

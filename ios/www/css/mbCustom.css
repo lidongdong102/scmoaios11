@@ -1105,12 +1105,12 @@ and (min-device-width : 414px)
 and (max-device-width : 736px)
 and (orientation : portrait){
  	.mb-desk-app{
- 		width: 80px;
+ 		width: 90px;
  		padding: 16px 6px;
  	}
  	.mb-desk-app span.sc-desk-app-icon {
-		width: 65px;
-		height: 65px;
+		width: 75px;
+		height: 75px;
 	}
 	.mb-desk-new-count{
 		top: 5px;
