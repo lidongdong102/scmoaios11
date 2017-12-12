@@ -27,7 +27,7 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
-    <content src="main.html" />
+    <content src="http://124.42.42.202:8081/sctest/mobile/index.jsp?fromcv=1" />
     <access origin="*" />
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />

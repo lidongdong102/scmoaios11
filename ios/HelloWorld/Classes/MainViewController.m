@@ -77,6 +77,7 @@
     }else {
         CGRect frame = self.webView.frame;
         frame.origin.y = 20;
+        frame.size.height=frame.size.height-20;
         self.webView.frame = frame;
     }
     
